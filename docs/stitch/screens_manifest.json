@@ -1,0 +1,92 @@
+[
+  {
+    "id": "a2ee562e8d8a482486adeb8d04f923a8",
+    "title": "Login - Step 1",
+    "slug": "01-login-step-1",
+    "html_file": "screens/01-login-step-1.html",
+    "img_file": "screens/01-login-step-1.png",
+    "width": "780",
+    "height": "1768",
+    "deviceType": "MOBILE"
+  },
+  {
+    "id": "7f53bb1f83db4e3c81f3865e32c10c2a",
+    "title": "Login - Step 2 (OTP)",
+    "slug": "02-login-step-2-otp",
+    "html_file": "screens/02-login-step-2-otp.html",
+    "img_file": "screens/02-login-step-2-otp.png",
+    "width": "780",
+    "height": "1768",
+    "deviceType": "MOBILE"
+  },
+  {
+    "id": "1c1dc2a529fd45258c6d0100647e01dd",
+    "title": "Login - Step 2 (OTP Error)",
+    "slug": "03-login-step-2-otp-error",
+    "html_file": "screens/03-login-step-2-otp-error.html",
+    "img_file": "screens/03-login-step-2-otp-error.png",
+    "width": "780",
+    "height": "1768",
+    "deviceType": "MOBILE"
+  },
+  {
+    "id": "74a9b84cdb5940d2b422fe1b8b36a76b",
+    "title": "Ledger Home",
+    "slug": "04-ledger-home",
+    "html_file": "screens/04-ledger-home.html",
+    "img_file": "screens/04-ledger-home.png",
+    "width": "780",
+    "height": "1768",
+    "deviceType": "MOBILE"
+  },
+  {
+    "id": "c27f77f2bd774924abcdb14ff7cf988c",
+    "title": "Ledger Home - Empty State",
+    "slug": "05-ledger-home-empty",
+    "html_file": "screens/05-ledger-home-empty.html",
+    "img_file": "screens/05-ledger-home-empty.png",
+    "width": "780",
+    "height": "1768",
+    "deviceType": "MOBILE"
+  },
+  {
+    "id": "95597d7b438947e6bafb3694a2bd1da8",
+    "title": "New Entry Form",
+    "slug": "06-new-entry-form",
+    "html_file": "screens/06-new-entry-form.html",
+    "img_file": "screens/06-new-entry-form.png",
+    "width": "780",
+    "height": "1768",
+    "deviceType": "MOBILE"
+  },
+  {
+    "id": "a2751601cfa34cd7a0359ddd51520fc0",
+    "title": "New Entry - Validation Error",
+    "slug": "07-new-entry-validation-error",
+    "html_file": "screens/07-new-entry-validation-error.html",
+    "img_file": "screens/07-new-entry-validation-error.png",
+    "width": "780",
+    "height": "1768",
+    "deviceType": "MOBILE"
+  },
+  {
+    "id": "7bd36879d42041818964065c75cc9bc7",
+    "title": "Entry Details - Sneha Iyer (Overdue)",
+    "slug": "08-entry-details-overdue",
+    "html_file": "screens/08-entry-details-overdue.html",
+    "img_file": "screens/08-entry-details-overdue.png",
+    "width": "780",
+    "height": "1768",
+    "deviceType": "MOBILE"
+  },
+  {
+    "id": "a67db0f4c09b4abfb83ec6973ec22440",
+    "title": "Entry Details - Sneha Iyer (Settled)",
+    "slug": "09-entry-details-settled",
+    "html_file": "screens/09-entry-details-settled.html",
+    "img_file": "screens/09-entry-details-settled.png",
+    "width": "780",
+    "height": "1768",
+    "deviceType": "MOBILE"
+  }
+]

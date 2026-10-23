@@ -1,0 +1,264 @@
+{
+  "name": "projects/1781416321951565917",
+  "title": "MiniLedger Mobile Login",
+  "visibility": "PRIVATE",
+  "createTime": "2026-10-21T15:53:48.223809Z",
+  "updateTime": "2026-10-21T16:45:42.342781Z",
+  "projectType": "TEXT_TO_UI_PRO",
+  "thumbnailScreenshot": {
+    "name": "projects/1781416321951565917/screens/a2ee562e8d8a482486adeb8d04f923a8/fileEntries/screenshot",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1XwkOeWCdkm9N4AaEhRisWIDKQ6KeUNnRrmK_UohaUAiL9RZYvKauCrdcMdyEsKAtRkH7tzpJi8ar3owTD-9sD92FrKS45nsvnEWuACXJRSoNkLPQSNmgaUH2jBKIb1qsZLgrbn8ElDSLy0UDgHZ3pBVjFRcxu6q4C9o7QQ0ykeyXtnQMop6tExZesqRPcBopOS_iG2sc8lZa3izs8N5pzf6U-5XU5nHB2LhpLHnfBQGO172CVjTF93"
+  },
+  "origin": "STITCH",
+  "deviceType": "MOBILE",
+  "designTheme": {
+    "colorMode": "LIGHT",
+    "font": "EB_GARAMOND",
+    "customColor": "#1b1a17",
+    "headlineFont": "EB_GARAMOND",
+    "bodyFont": "EB_GARAMOND",
+    "namedColors": {
+      "on_tertiary_fixed": "#002113",
+      "primary_fixed_dim": "#cac6c1",
+      "inverse_on_surface": "#f7f0e1",
+      "on_error_container": "#93000a",
+      "on_primary": "#ffffff",
+      "surface_container_lowest": "#ffffff",
+      "surface_bright": "#fff9ee",
+      "primary_container": "#1d1b18",
+      "inverse_surface": "#333026",
+      "on_surface_variant": "#494740",
+      "on_secondary_container": "#6f0806",
+      "error": "#ba1a1a",
+      "surface_variant": "#e9e2d3",
+      "on_tertiary_container": "#549071",
+      "primary_fixed": "#e6e2dc",
+      "on_tertiary_fixed_variant": "#105137",
+      "outline": "#7a776f",
+      "on_primary_container": "#86837f",
+      "secondary": "#aa352a",
+      "on_error": "#ffffff",
+      "tertiary_container": "#002113",
+      "on_secondary": "#ffffff",
+      "surface_container_highest": "#e9e2d3",
+      "on_surface": "#1e1b13",
+      "on_background": "#1e1b13",
+      "inverse_primary": "#cac6c1",
+      "on_primary_fixed_variant": "#484743",
+      "surface_container_high": "#eee8d9",
+      "surface": "#fff9ee",
+      "on_primary_fixed": "#1d1b18",
+      "background": "#fff9ee",
+      "error_container": "#ffdad6",
+      "primary": "#000000",
+      "secondary_fixed": "#ffdad5",
+      "on_secondary_fixed_variant": "#891d16",
+      "on_tertiary": "#ffffff",
+      "outline_variant": "#cac6bd",
+      "tertiary_fixed_dim": "#96d4b2",
+      "surface_dim": "#e0d9cb",
+      "surface_tint": "#605e5a",
+      "surface_container_low": "#faf3e4",
+      "secondary_container": "#fd7362",
+      "surface_container": "#f4edde",
+      "on_secondary_fixed": "#410001",
+      "tertiary": "#000000",
+      "tertiary_fixed": "#b1f0cd",
+      "secondary_fixed_dim": "#ffb4a9"
+    },
+    "designMd": "---\nname: Paper Ledger\ncolors:\n  surface: '#fff9ee'\n  surface-dim: '#e0d9cb'\n  surface-bright: '#fff9ee'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#faf3e4'\n  surface-container: '#f4edde'\n  surface-container-high: '#eee8d9'\n  surface-container-highest: '#e9e2d3'\n  on-surface: '#1e1b13'\n  on-surface-variant: '#494740'\n  inverse-surface: '#333026'\n  inverse-on-surface: '#f7f0e1'\n  outline: '#7a776f'\n  outline-variant: '#cac6bd'\n  surface-tint: '#605e5a'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1d1b18'\n  on-primary-container: '#86837f'\n  inverse-primary: '#cac6c1'\n  secondary: '#aa352a'\n  on-secondary: '#ffffff'\n  secondary-container: '#fd7362'\n  on-secondary-container: '#6f0806'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#002113'\n  on-tertiary-container: '#549071'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e6e2dc'\n  primary-fixed-dim: '#cac6c1'\n  on-primary-fixed: '#1d1b18'\n  on-primary-fixed-variant: '#484743'\n  secondary-fixed: '#ffdad5'\n  secondary-fixed-dim: '#ffb4a9'\n  on-secondary-fixed: '#410001'\n  on-secondary-fixed-variant: '#891d16'\n  tertiary-fixed: '#b1f0cd'\n  tertiary-fixed-dim: '#96d4b2'\n  on-tertiary-fixed: '#002113'\n  on-tertiary-fixed-variant: '#105137'\n  background: '#fff9ee'\n  on-background: '#1e1b13'\n  surface-variant: '#e9e2d3'\ntypography:\n  headline-xl:\n    fontFamily: EB Garamond\n    fontSize: 34px\n    fontWeight: '600'\n    lineHeight: 40px\n    letterSpacing: -0.01em\n  headline-xl-mobile:\n    fontFamily: EB Garamond\n    fontSize: 22px\n    fontWeight: '600'\n    lineHeight: 28px\n    letterSpacing: 0em\n  headline-lg:\n    fontFamily: EB Garamond\n    fontSize: 22px\n    fontWeight: '500'\n    lineHeight: 28px\n    letterSpacing: 0em\n  body-lg:\n    fontFamily: EB Garamond\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  body-sm:\n    fontFamily: EB Garamond\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\n  stamp-lg:\n    fontFamily: IBM Plex Mono\n    fontSize: 22px\n    fontWeight: '700'\n    lineHeight: 24px\n    letterSpacing: 0.14em\n  stamp-sm:\n    fontFamily: IBM Plex Mono\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 16px\n    letterSpacing: 0.12em\n  mono-header:\n    fontFamily: IBM Plex Mono\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 18px\n    letterSpacing: 0.08em\n  mono-data:\n    fontFamily: IBM Plex Mono\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\n    letterSpacing: 0em\n  label-mono:\n    fontFamily: IBM Plex Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\n    letterSpacing: 0.06em\n  caption-mono:\n    fontFamily: IBM Plex Mono\n    fontSize: 12px\n    fontWeight: '400'\n    lineHeight: 14px\n    letterSpacing: 0.02em\nspacing:\n  gutter: 1rem\n  gutter-lg: 1.5rem\n  margin: 1rem\n  margin-md: 2rem\n  margin-lg: 3rem\n  space-xs: 0.25rem\n  space-sm: 0.5rem\n  space-md: 1rem\n  space-lg: 1.5rem\n  space-xl: 2rem\n---\n\n## Brand & Style\n\nThe design system evokes the physical reality of a bound, linen-thread bookkeeper's journal from the late nineteenth to mid-twentieth century. Built for meticulous fiscal record-keeping, balance tracking, and ledger audits, it departs entirely from contemporary gloss, software abstractions, and frictionless digital aesthetics. It speaks to precision, permanence, accountability, and disciplined labor.\n\nThe aesthetic combines rigorous Brutalism with tactile analog stationery: flat pulp paper sheets, hairline ink boundaries, disciplined ruled registers, physical rubber-stamp adjudications, and crisp cold-metal typography. \n\nGuiding Directives:\n- **Zero Digital Artifice**: Prohibit all drop shadows, box shadows, blurs, multi-stop gradients, glass surfaces, or ambient glows. Surfaces do not float; they sit flush like cut leaves of paper.\n- **Ink-on-Paper Discipline**: Interfaces rely strictly on physical sheet boundaries, ruling lines, stamped ink blocks, and monospaced alignment grids.\n- **Editorial Terse Tone**: Microcopy and feedback must read like dry, telegraphic bookkeeper annotations (\"FOLIO 104 BALANCED\", \"DEBIT APPLIED\", \"RECORDS LOCKED\", \"ARREARS OUTSTANDING\"). Eliminate casual greetings, playful flourishes, and marketing hyperbole.\n- **Prohibited Attributes**: Absolutely no blue/purple SaaS accent palettes, pill-shaped chips, floating action buttons, circular avatar badges, decorative iconography sets, emojis, or rounded bubble containers.\n\n## Colors\n\nThe palette is derived from aged stationery stock, iron gall ink, and mineral marking dyes. High-contrast line work against muted pulp tones ensures tabular legibility under dense informational loads.\n\n### Palette Tokens\n- **Paper Background (`#F3ECDD`)**: Base sheet canvas representing natural, unbleached heavy rag paper.\n- **Paper Shade (`#EAE1CD`)**: Secondary sheet tier used for ledger folio cards, insected panels, and table header rows.\n- **Ink (`#1B1A17`)**: Primary structural color for ink lines, 1.5px master rules, structural borders, primary lettering, and solid command buttons.\n- **Muted Ink (`#6B655A`)**: Secondary ink tone for folio identifiers, tabular column subheadings, timestamps, and advisory notes.\n- **Ledger Rule (`#CBD5CF`)**: Light mineral blue-grey hairline ruling color used for horizontal row dividers and sheet guidelines.\n- **Margin Red (`#C2473A`)**: Structural accounting red for vertical journal margin rules, debit summaries, error notices, and past-due audit stamps.\n- **Paid Green (`#2F6B4F`)**: Saturated verification green reserved strictly for settlement verification stamps, surplus balances, and ledger balancing receipts.\n\n### Application Rules\n- Never use opacity or alpha-channel transparency to achieve hierarchy. If an element requires de-emphasis, apply solid `Muted Ink` (`#6B655A`) or solid `Ledger Rule` (`#CBD5CF`).\n- Surfaces must remain entirely opaque. Layers are depicted through mechanical nesting and border demarcation, never via transparency.\n\n## Typography\n\nTypographic hierarchy rests upon two opposing voices: the classical authority of literary serif letterforms for narrative headings and formal balances, countered by the mechanical precision of monospaced characters for indexing, tabular currency arrays, metadata stamps, and structural headers.\n\n### Font Hierarchy & Roles\n- **Serif System (`EB Garamond`)**: Used for page folios, narrative balance sheets, section titles, and narrative entry descriptions. It evokes the formal copperplate and serifed headings found on physical financial register title pages.\n- **Monospace System (`IBM Plex Mono`)**: Governs all operational metadata, dates, monetary values, reference indices, column headers, form input labels, system statuses, and rubber audit stamps. Tabular numerals must always be aligned right when representing accounting figures.\n\n### Typographic Constraints\n- Restricted strictly to the defined scale: 12px, 14px, 16px, 22px, and 34px. No intermediate or arbitrary fractional sizes.\n- Monospace headers and stamps are always uppercase with expanded letter-spacing to mimic handset lead type and carved wooden rubber stamps.\n\n## Layout & Spacing\n\nThe layout is structured around an authentic accounting folio sheet. The core organizing principle relies on a fixed, uninterrupted vertical margin rule running down the left boundary of the primary viewport or ledger container.\n\n### The Double Left Margin Rule\nAll primary views feature a signature double vertical line running down the left canvas, placed between the navigation/audit spine and the primary ledger entry area:\n- Constructed as two parallel vertical rules of 1px solid `Margin Red` (`#C2473A`), separated by an exact 3px gap.\n- Content to the left contains journal folio numbers, transaction dates, and line indices. Content to the right contains transaction narratives, debit/credit columns, and balance summaries.\n\n### Grid & Folio Architecture\n- **Desktop (1024px and above)**: 12-column grid within a bounded folio container (max-width: 1280px). Margin: 3rem (`margin-lg`), Gutters: 1.5rem (`gutter-lg`).\n- **Tablet (768px \u2013 1023px)**: 8-column layout. Margin: 2rem (`margin-md`), Gutters: 1rem (`gutter`).\n- **Mobile (Below 768px)**: 4-column layout. Margin: 1rem (`margin`), Gutters: 1rem (`gutter`). Ledger tables collapse into vertical debit/credit item blocks, with the red vertical margin maintaining its presence along the left viewport edge.\n\n### Rhythmic Ruled Lines\nLedger tables and records align to a fixed 36px or 44px vertical row-height cadence. Horizontal row divisions are explicitly drawn using 1px solid `Ledger Rule` (`#CBD5CF`), giving the entire page the visual structure of pre-printed accounting paper.\n\n## Elevation & Depth\n\nVisual hierarchy is communicated strictly through surface layering and bold physical borders. Physical depth is created through cut-sheet paper placement rather than atmospheric lighting.\n\n### Architectural Rules\n- **No Drop Shadows or Glows**: Prohibit `box-shadow`, `text-shadow`, and `filter: drop-shadow()`.\n- **Primary Ink Borders**: Delimit distinct folio boundaries, structural ledger modules, modal registries, and card frames using a deliberate 1.5px solid `Ink` (`#1B1A17`) rule.\n- **Layer Stacking**:\n  - **Base Canvas**: `Paper Background` (`#F3ECDD`).\n  - **Delineated Sheets / Containers**: Cut panels surfaced with `Paper Shade` (`#EAE1CD`) and framed by a 1.5px solid `Ink` border.\n  - **Header & Rule Stacking**: Fixed structural headers sit on `Paper Background` or `Paper Shade` separated from the content by a continuous 1.5px horizontal ink line.\n- **Pressed Interaction States**: Interactive items do not lift toward the user. On click/press, interactive components simulate physical stamping or insetting by inverting colors (e.g., secondary buttons switch to solid ink fill with paper text) or displacing content 1px down and 1px right along the axis.\n\n## Shapes\n\nThe shape system represents guillotined paper and square metal-type blocks. \n\n### Geometric Rules\n- **Default Corner Geometry**: All surfaces, sheets, containers, table cells, and buttons possess sharp 0px to maximum 2px corners (`border-radius: 0px` to `2px`). Rounded pill forms, circular buttons, and fluid organic curves are expressly forbidden.\n- **Edge Finish**: Edges must remain razor-sharp and unsoftened. A maximum 2px radius is allowed solely on master card enclosures and buttons to represent slightly worn or cut heavy-stock card corners.\n- **Stamps & Badges**: Rubber stamps are rendered as strict, unrounded rectangular frames (`border-radius: 0px` to `2px`).\n\n## Components\n\n### Buttons & Interactive Controls\n- **Primary Command (Solid Ink)**:\n  - Surface: Solid `Ink` (`#1B1A17`).\n  - Text: Uppercase `IBM Plex Mono` (12px or 14px), letterspaced 0.08em, colored in `Paper Background` (`#F3ECDD`).\n  - Border: 1.5px solid `Ink` (`#1B1A17`), corner radius 2px max.\n  - State: On `:hover`, subtle color shift to `#2E2C27`. On `:active`, shift position 1px down and 1px right.\n- **Secondary Command (Ruled Outline)**:\n  - Surface: `Paper Background` (`#F3ECDD`) or transparent.\n  - Text: Uppercase `IBM Plex Mono`, `Ink` (`#1B1A17`).\n  - Border: 1.5px solid `Ink` (`#1B1A17`), corner radius 2px max.\n  - State: On `:hover` and `:active`, invert surface to `Ink` with `Paper Background` text.\n- **Destructive Command**:\n  - Bordered with 1.5px solid `Margin Red` (`#C2473A`), text in `Margin Red`. On press, inverts to solid `Margin Red` background with `Paper Background` text.\n\n### Form Inputs & Entry Fields\n- **Underline-Only Styling**: Inputs reject enclosed boxes. Form fields consist of a single bottom border: 1.5px solid `Ink` (`#1B1A17`).\n- **Surface**: Completely transparent, revealing the underlying paper shade.\n- **Labeling**: Placed strictly above the entry line in uppercase `IBM Plex Mono` (12px, letter-spacing: 0.06em, `Muted Ink` `#6B655A`).\n- **Focus State**: The bottom rule thickens to 2px solid `Ink`, or shifts to 1.5px solid `Margin Red` for errors. No blue outlines or glowing halos.\n\n### Tabular Ledger Records\n- **Structure**: Ruled table rows with fixed 40px height. Alternating rows may alternate subtly between `Paper Background` and `Paper Shade`.\n- **Divider Lines**: Every horizontal row separator is 1px solid `Ledger Rule` (`#CBD5CF`).\n- **Summary / Totals Rows**: Double bottom border consisting of two parallel 1px solid `Ink` rules spaced 2px apart (traditional accounting balance notation).\n- **Alignment**: Numerical debit/credit figures must be set in `IBM Plex Mono`, right-aligned, with matching decimal positions.\n\n### Rubber Verification Stamps\n- **Visual Presentation**: Framed rectangular stamps angled slightly at `-6deg` (or `+6deg` variant).\n- **Structure**: 2px solid ink border enclosing bold, uppercase `IBM Plex Mono` lettering with wide letter-spacing (`0.14em`).\n- **Stamping Modes**:\n  - **Settled / Verified**: 2px solid border in `Paid Green` (`#2F6B4F`), label reads \"PAID\", \"POSTED\", or \"BALANCED\".\n  - **Overdue / Rectification**: 2px solid border in `Margin Red` (`#C2473A`), label reads \"OVERDUE\", \"AUDIT DEFICIT\", or \"VOID\".\n\n### Checkboxes & Selection Controls\n- **Checkboxes**: Precise 14px by 14px square (`border-radius: 0px`), 1.5px solid `Ink` outline, transparent fill. Checked state displays a solid hand-drawn diagonal hatch or an ink block fill (`#1B1A17`).\n- **Radio Buttons**: Small 14px square boxes set on a 45-degree angle (diamond shape) or square outer with a solid center square to avoid modern circular radio semantics.\n\n### Cards & Folio Sheets\n- Base cards use `Paper Shade` (`#EAE1CD`) bounded by a continuous 1.5px solid `Ink` line.\n- Corners are strictly 0px to 2px.\n- Internal card headers are separated from card bodies by a 1px solid `Ledger Rule` or 1.5px `Ink` divider line.",
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#1b1a17",
+    "overrideSecondaryColor": "#c2473a",
+    "overrideTertiaryColor": "#2f6b4f",
+    "overrideNeutralColor": "#f3ecdd",
+    "spacingScale": 2,
+    "typography": {
+      "stamp-lg": {
+        "fontFamily": "IBM Plex Mono",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "lineHeight": "24px",
+        "letterSpacing": "0.14em"
+      },
+      "body-sm": {
+        "fontFamily": "EB Garamond",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "20px"
+      },
+      "mono-header": {
+        "fontFamily": "IBM Plex Mono",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "lineHeight": "18px",
+        "letterSpacing": "0.08em"
+      },
+      "mono-data": {
+        "fontFamily": "IBM Plex Mono",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "20px",
+        "letterSpacing": "0em"
+      },
+      "caption-mono": {
+        "fontFamily": "IBM Plex Mono",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "lineHeight": "14px",
+        "letterSpacing": "0.02em"
+      },
+      "stamp-sm": {
+        "fontFamily": "IBM Plex Mono",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "lineHeight": "16px",
+        "letterSpacing": "0.12em"
+      },
+      "headline-lg": {
+        "fontFamily": "EB Garamond",
+        "fontSize": "22px",
+        "fontWeight": "500",
+        "lineHeight": "28px",
+        "letterSpacing": "0em"
+      },
+      "body-lg": {
+        "fontFamily": "EB Garamond",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "24px"
+      },
+      "label-mono": {
+        "fontFamily": "IBM Plex Mono",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "lineHeight": "16px",
+        "letterSpacing": "0.06em"
+      },
+      "headline-xl": {
+        "fontFamily": "EB Garamond",
+        "fontSize": "34px",
+        "fontWeight": "600",
+        "lineHeight": "40px",
+        "letterSpacing": "-0.01em"
+      },
+      "headline-xl-mobile": {
+        "fontFamily": "EB Garamond",
+        "fontSize": "22px",
+        "fontWeight": "600",
+        "lineHeight": "28px",
+        "letterSpacing": "0em"
+      }
+    },
+    "spacing": {
+      "space-xl": "2rem",
+      "gutter-lg": "1.5rem",
+      "margin-lg": "3rem",
+      "margin": "1rem",
+      "gutter": "1rem",
+      "margin-md": "2rem",
+      "space-lg": "1.5rem",
+      "space-sm": "0.5rem",
+      "space-xs": "0.25rem",
+      "space-md": "1rem"
+    },
+    "headlineFontFamily": "EB Garamond",
+    "bodyFontFamily": "EB Garamond",
+    "labelFontFamily": "IBM Plex Mono"
+  },
+  "screenInstances": [
+    {
+      "id": "1c1dc2a529fd45258c6d0100647e01dd",
+      "sourceScreen": "projects/1781416321951565917/screens/1c1dc2a529fd45258c6d0100647e01dd",
+      "x": 454,
+      "y": 1140,
+      "width": 390,
+      "height": 884,
+      "label": "Generating Screen..."
+    },
+    {
+      "id": "74a9b84cdb5940d2b422fe1b8b36a76b",
+      "sourceScreen": "projects/1781416321951565917/screens/74a9b84cdb5940d2b422fe1b8b36a76b",
+      "y": 2280,
+      "width": 390,
+      "height": 884,
+      "label": "Generating Screen..."
+    },
+    {
+      "id": "7bd36879d42041818964065c75cc9bc7",
+      "sourceScreen": "projects/1781416321951565917/screens/7bd36879d42041818964065c75cc9bc7",
+      "x": 454,
+      "y": 3420,
+      "width": 390,
+      "height": 777,
+      "label": "Generating Screen..."
+    },
+    {
+      "id": "7f53bb1f83db4e3c81f3865e32c10c2a",
+      "sourceScreen": "projects/1781416321951565917/screens/7f53bb1f83db4e3c81f3865e32c10c2a",
+      "y": 1140,
+      "width": 390,
+      "height": 884,
+      "label": "Generating Screen..."
+    },
+    {
+      "id": "95597d7b438947e6bafb3694a2bd1da8",
+      "sourceScreen": "projects/1781416321951565917/screens/95597d7b438947e6bafb3694a2bd1da8",
+      "y": 4453,
+      "width": 390,
+      "height": 884,
+      "label": "Generating Screen..."
+    },
+    {
+      "id": "a2751601cfa34cd7a0359ddd51520fc0",
+      "sourceScreen": "projects/1781416321951565917/screens/a2751601cfa34cd7a0359ddd51520fc0",
+      "x": 454,
+      "y": 4453,
+      "width": 390,
+      "height": 884,
+      "label": "Generating Screen..."
+    },
+    {
+      "id": "a2ee562e8d8a482486adeb8d04f923a8",
+      "sourceScreen": "projects/1781416321951565917/screens/a2ee562e8d8a482486adeb8d04f923a8",
+      "x": 1024,
+      "width": 390,
+      "height": 884,
+      "label": "Generating Screen..."
+    },
+    {
+      "id": "a67db0f4c09b4abfb83ec6973ec22440",
+      "sourceScreen": "projects/1781416321951565917/screens/a67db0f4c09b4abfb83ec6973ec22440",
+      "y": 3420,
+      "width": 390,
+      "height": 715,
+      "label": "Generating Screen..."
+    },
+    {
+      "id": "assets_4b47a142c6ad4b90b711ed26d6776aba",
+      "width": 960,
+      "height": 540,
+      "sourceAsset": "assets/4b47a142c6ad4b90b711ed26d6776aba",
+      "type": "DESIGN_SYSTEM_INSTANCE"
+    },
+    {
+      "id": "assets_c0e3ed26abd24e428510448cd7021a3e",
+      "y": 6733,
+      "width": 960,
+      "height": 540,
+      "sourceAsset": "assets/c0e3ed26abd24e428510448cd7021a3e",
+      "type": "DESIGN_SYSTEM_INSTANCE"
+    },
+    {
+      "id": "c27f77f2bd774924abcdb14ff7cf988c",
+      "sourceScreen": "projects/1781416321951565917/screens/c27f77f2bd774924abcdb14ff7cf988c",
+      "y": 5593,
+      "width": 390,
+      "height": 884,
+      "label": "Generating Screen..."
+    }
+  ],
+  "metadata": {
+    "userRole": "OWNER"
+  }
+}

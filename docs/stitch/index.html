@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniLedger - Google Stitch Project Import</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#fff9ee',
+            'paper-dim': '#eae1cd',
+            ink: '#1b1a17',
+            'ink-muted': '#6b655a',
+            'ledger-red': '#c2473a',
+            'paid-green': '#2f6b4f',
+            'ledger-rule': '#cbd5cf',
+          },
+          fontFamily: {
+            serif: ['EB Garamond', 'serif'],
+            mono: ['IBM Plex Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f4edde;
+      color: #1b1a17;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    .paper-border {
+      border: 1.5px solid #1b1a17;
+    }
+    .phone-mockup {
+      width: 390px;
+      height: 844px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 12px #1b1a17, 0 0 0 14px #6b655a;
+      border-radius: 44px;
+      overflow: hidden;
+      position: relative;
+      background: #fff9ee;
+    }
+    .phone-notch {
+      width: 120px;
+      height: 28px;
+      background: #1b1a17;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      z-index: 50;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #7a776f;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #e9e2d3;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Header Banner -->
+  <header class="bg-paper border-b-2 border-ink px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-4">
+      <div class="border border-ink px-2 py-1 bg-[#fff9ee]">
+        <span class="text-xs uppercase font-bold tracking-widest text-ledger-red">GOOGLE STITCH IMPORT</span>
+      </div>
+      <div>
+        <h1 class="text-2xl font-serif font-bold text-ink flex items-center gap-2">
+          MiniLedger <span class="text-sm font-mono font-normal text-ink-muted">· Mobile Login & Bookkeeping</span>
+        </h1>
+        <p class="text-xs text-ink-muted mt-0.5">
+          Project ID: <span class="font-bold text-ink">1781416321951565917</span> · System: <span class="font-serif italic font-semibold">Paper Ledger</span> (1938 Series)
+        </p>
+      </div>
+    </div>
+    
+    <div class="flex items-center gap-3">
+      <a href="https://stitch.withgoogle.com/projects/1781416321951565917?pli=1" target="_blank" rel="noreferrer" class="text-xs border border-ink px-3 py-1.5 bg-paper hover:bg-ink hover:text-paper transition-colors flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-sm">open_in_new</span> Open in Google Stitch
+      </a>
+      <a href="DESIGN.md" target="_blank" class="text-xs border border-ink px-3 py-1.5 bg-paper hover:bg-ink hover:text-paper transition-colors flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-sm">menu_book</span> DESIGN.md
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Workspace Layout -->
+  <div class="flex-1 flex overflow-hidden">
+    
+    <!-- Left Sidebar: Screen Navigator -->
+    <aside class="w-80 border-r-2 border-ink bg-paper flex flex-col shrink-0 custom-scrollbar overflow-y-auto">
+      
+      <!-- Flow Category Filter -->
+      <div class="p-3 border-b border-ink/30 bg-[#faf3e4]">
+        <span class="text-[11px] uppercase tracking-wider text-ink-muted font-bold block mb-1">DESIGN SCREENS (9)</span>
+        <div class="text-[11px] text-ink-muted">Select a screen to view live HTML or Stitch original screenshot.</div>
+      </div>
+
+      <!-- Screen List Buttons -->
+      <div class="flex flex-col divide-y divide-ink/20" id="screen-list-container">
+        <!-- Rendered dynamically via JS -->
+      </div>
+
+      <!-- Design Tokens Quick Peek -->
+      <div class="mt-auto p-4 border-t-2 border-ink bg-[#eee8d9]">
+        <span class="text-xs uppercase font-bold tracking-wider block mb-2 text-ink">Design Tokens</span>
+        <div class="grid grid-cols-5 gap-1.5 mb-3">
+          <div class="h-6 rounded border border-ink" style="background:#fff9ee;" title="Paper: #fff9ee"></div>
+          <div class="h-6 rounded border border-ink" style="background:#eae1cd;" title="Paper Shade: #eae1cd"></div>
+          <div class="h-6 rounded border border-ink" style="background:#1b1a17;" title="Ink: #1b1a17"></div>
+          <div class="h-6 rounded border border-ink" style="background:#c2473a;" title="Margin Red: #c2473a"></div>
+          <div class="h-6 rounded border border-ink" style="background:#2f6b4f;" title="Paid Green: #2f6b4f"></div>
+        </div>
+        <div class="text-[11px] text-ink-muted leading-tight">
+          Double vertical margin rule in <span class="text-ledger-red font-bold">#C2473A</span>. Zero dropshadows. Hairline accounting rules.
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area: Device Simulator & Previews -->
+    <main class="flex-1 flex flex-col bg-[#f4edde] overflow-hidden">
+      
+      <!-- Control Bar -->
+      <div class="h-14 border-b border-ink/30 bg-paper px-6 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-3">
+          <span class="text-xs uppercase tracking-wider text-ink-muted">Viewing:</span>
+          <span id="current-screen-title" class="font-serif font-bold text-lg text-ink">Login - Step 1</span>
+          <span id="current-screen-badge" class="text-[10px] px-2 py-0.5 border border-ledger-red text-ledger-red font-bold uppercase">Auth</span>
+        </div>
+
+        <!-- Mode Toggles -->
+        <div class="flex items-center gap-2">
+          <!-- Live HTML vs Screenshot vs Side by Side -->
+          <div class="inline-flex border border-ink bg-[#faf3e4] p-0.5 text-xs">
+            <button id="btn-mode-html" onclick="setMode('html')" class="px-3 py-1 font-bold bg-ink text-paper transition-all">
+              Live HTML
+            </button>
+            <button id="btn-mode-shot" onclick="setMode('shot')" class="px-3 py-1 text-ink hover:bg-ink/10 transition-all">
+              Stitch Screenshot
+            </button>
+            <button id="btn-mode-split" onclick="setMode('split')" class="px-3 py-1 text-ink hover:bg-ink/10 transition-all">
+              Compare
+            </button>
+          </div>
+
+          <!-- Open in standalone window -->
+          <a id="btn-open-screen" href="screens/01-login-step-1.html" target="_blank" class="text-xs border border-ink px-2.5 py-1.5 bg-paper hover:bg-ink hover:text-paper transition-colors flex items-center gap-1" title="Open screen directly in new window">
+            <span class="material-symbols-outlined text-sm">open_in_browser</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Preview Canvas -->
+      <div class="flex-1 overflow-auto p-8 flex items-center justify-center custom-scrollbar" id="viewport-canvas">
+        
+        <!-- Live HTML Container -->
+        <div id="html-view-wrapper" class="flex flex-col items-center">
+          <div class="phone-mockup relative">
+            <div class="phone-notch"></div>
+            <iframe id="screen-iframe" src="screens/01-login-step-1.html" class="w-full h-full border-none"></iframe>
+          </div>
+          <div class="mt-4 text-xs text-ink-muted font-mono flex items-center gap-2">
+            <span class="inline-block w-2 h-2 rounded-full bg-paid-green"></span>
+            Interactive Mobile Preview (390 x 844 px)
+          </div>
+        </div>
+
+        <!-- Screenshot Container (Hidden by default) -->
+        <div id="shot-view-wrapper" class="hidden flex flex-col items-center">
+          <div class="border-2 border-ink shadow-2xl bg-paper max-h-[844px] overflow-auto">
+            <img id="screen-image" src="screens/01-login-step-1.png" alt="Screen preview" class="max-w-[390px] h-auto block" />
+          </div>
+          <div class="mt-4 text-xs text-ink-muted font-mono flex items-center gap-2">
+            <span class="inline-block w-2 h-2 rounded-full bg-ledger-red"></span>
+            Original Google Stitch Screenshot Export
+          </div>
+        </div>
+
+        <!-- Split View Container (Hidden by default) -->
+        <div id="split-view-wrapper" class="hidden flex items-start gap-8 justify-center w-full">
+          <div class="flex flex-col items-center">
+            <span class="text-xs font-bold uppercase mb-2 text-ink">Interactive HTML</span>
+            <div class="phone-mockup relative">
+              <div class="phone-notch"></div>
+              <iframe id="screen-iframe-split" src="screens/01-login-step-1.html" class="w-full h-full border-none"></iframe>
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-xs font-bold uppercase mb-2 text-ink">Stitch Screenshot</span>
+            <div class="phone-mockup overflow-auto bg-paper">
+              <img id="screen-image-split" src="screens/01-login-step-1.png" alt="Screen preview" class="w-full h-auto block" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    const screens = [
+      { id: "a2ee562e8d8a482486adeb8d04f923a8", slug: "01-login-step-1", title: "Login - Step 1", category: "Auth", folio: "Folio 01" },
+      { id: "7f53bb1f83db4e3c81f3865e32c10c2a", slug: "02-login-step-2-otp", title: "Login - Step 2 (OTP)", category: "Auth", folio: "Folio 01" },
+      { id: "1c1dc2a529fd45258c6d0100647e01dd", slug: "03-login-step-2-otp-error", title: "Login - Step 2 (OTP Error)", category: "Auth", folio: "Folio 01" },
+      { id: "74a9b84cdb5940d2b422fe1b8b36a76b", slug: "04-ledger-home", title: "Ledger Home", category: "Ledger", folio: "Folio 03" },
+      { id: "c27f77f2bd774924abcdb14ff7cf988c", slug: "05-ledger-home-empty", title: "Ledger Home - Empty State", category: "Ledger", folio: "Folio 03" },
+      { id: "95597d7b438947e6bafb3694a2bd1da8", slug: "06-new-entry-form", title: "New Entry Form", category: "Form", folio: "Folio 04" },
+      { id: "a2751601cfa34cd7a0359ddd51520fc0", slug: "07-new-entry-validation-error", title: "New Entry - Validation Error", category: "Form", folio: "Folio 04" },
+      { id: "7bd36879d42041818964065c75cc9bc7", slug: "08-entry-details-overdue", title: "Entry Details (Overdue)", category: "Details", folio: "Folio 05" },
+      { id: "a67db0f4c09b4abfb83ec6973ec22440", slug: "09-entry-details-settled", title: "Entry Details (Settled)", category: "Details", folio: "Folio 05" },
+    ];
+
+    let currentScreenIndex = 0;
+    let currentMode = 'html'; // 'html' | 'shot' | 'split'
+
+    const listContainer = document.getElementById('screen-list-container');
+    const screenTitleEl = document.getElementById('current-screen-title');
+    const screenBadgeEl = document.getElementById('current-screen-badge');
+    const openBtn = document.getElementById('btn-open-screen');
+
+    const iframeEl = document.getElementById('screen-iframe');
+    const imgEl = document.getElementById('screen-image');
+    const iframeSplitEl = document.getElementById('screen-iframe-split');
+    const imgSplitEl = document.getElementById('screen-image-split');
+
+    const htmlViewWrapper = document.getElementById('html-view-wrapper');
+    const shotViewWrapper = document.getElementById('shot-view-wrapper');
+    const splitViewWrapper = document.getElementById('split-view-wrapper');
+
+    function renderScreenList() {
+      listContainer.innerHTML = '';
+      screens.forEach((s, idx) => {
+        const btn = document.createElement('button');
+        const isActive = idx === currentScreenIndex;
+        btn.className = `text-left p-3 flex flex-col transition-all border-l-4 ${
+          isActive 
+            ? 'bg-[#f4edde] border-ink text-ink font-semibold' 
+            : 'hover:bg-[#faf3e4] border-transparent text-ink/80'
+        }`;
+        btn.onclick = () => selectScreen(idx);
+
+        btn.innerHTML = `
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-[10px] tracking-widest text-ink-muted uppercase">${s.folio}</span>
+            <span class="text-[9px] px-1.5 py-0.2 border ${s.category === 'Auth' ? 'border-ink text-ink' : s.category === 'Ledger' ? 'border-paid-green text-paid-green' : 'border-ledger-red text-ledger-red'} font-bold uppercase">${s.category}</span>
+          </div>
+          <span class="font-serif text-base text-ink font-medium leading-tight">${s.title}</span>
+          <span class="text-[10px] text-ink-muted mt-1 font-mono">${s.slug}.html</span>
+        `;
+        listContainer.appendChild(btn);
+      });
+    }
+
+    function selectScreen(index) {
+      currentScreenIndex = index;
+      const s = screens[index];
+      screenTitleEl.textContent = s.title;
+      screenBadgeEl.textContent = s.category;
+      
+      const htmlSrc = `screens/${s.slug}.html`;
+      const imgSrc = `screens/${s.slug}.png`;
+      
+      iframeEl.src = htmlSrc;
+      imgEl.src = imgSrc;
+      iframeSplitEl.src = htmlSrc;
+      imgSplitEl.src = imgSrc;
+      openBtn.href = htmlSrc;
+
+      renderScreenList();
+    }
+
+    function setMode(mode) {
+      currentMode = mode;
+      
+      const btnHtml = document.getElementById('btn-mode-html');
+      const btnShot = document.getElementById('btn-mode-shot');
+      const btnSplit = document.getElementById('btn-mode-split');
+
+      btnHtml.className = `px-3 py-1 font-bold ${mode === 'html' ? 'bg-ink text-paper' : 'text-ink hover:bg-ink/10'} transition-all`;
+      btnShot.className = `px-3 py-1 font-bold ${mode === 'shot' ? 'bg-ink text-paper' : 'text-ink hover:bg-ink/10'} transition-all`;
+      btnSplit.className = `px-3 py-1 font-bold ${mode === 'split' ? 'bg-ink text-paper' : 'text-ink hover:bg-ink/10'} transition-all`;
+
+      htmlViewWrapper.classList.toggle('hidden', mode !== 'html');
+      shotViewWrapper.classList.toggle('hidden', mode !== 'shot');
+      splitViewWrapper.classList.toggle('hidden', mode !== 'split');
+    }
+
+    // Init
+    renderScreenList();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+### MiniLedger API - HTTP Requests Collection
+### Can be executed using VS Code REST Client, IntelliJ, or similar HTTP client tools.
+
+@baseUrl = http://localhost:4000/api
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+
+###############################################################################
+# 1. Health Check
+###############################################################################
+
+### Check API health
+GET {{baseUrl}}/health
+Accept: application/json
+
+###############################################################################
+# 2. Authentication Flow
+###############################################################################
+
+### Request OTP (Check server console for [MOCK OTP] code)
+POST {{baseUrl}}/auth/request-otp
+Content-Type: application/json
+
+{
+  "phone": "+919876543210"
+}
+
+### Verify OTP (Replace "123456" with the code printed in server console)
+# @name login
+POST {{baseUrl}}/auth/verify-otp
+Content-Type: application/json
+
+{
+  "phone": "+919876543210",
+  "code": "123456"
+}
+
+### Test Protected Route (Current User Profile)
+GET {{baseUrl}}/auth/me
+Authorization: Bearer {{login.response.body.token}}
+
+###############################################################################
+# 3. Create Loans (POST /api/loans - multipart/form-data)
+###############################################################################
+
+### Create Loan 1 (Pending: Rohan Mehta - ₹2,500.00)
+# @name createLoan1
+POST {{baseUrl}}/loans
+Authorization: Bearer {{login.response.body.token}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="friend_name"
+
+Rohan Mehta
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="amount"
+
+2500.00
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="due_date"
+
+2028-11-15
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Loan 2 (Sneha Iyer - ₹4,500.00)
+# @name createLoan2
+POST {{baseUrl}}/loans
+Authorization: Bearer {{login.response.body.token}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="friend_name"
+
+Sneha Iyer
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="amount"
+
+4500.00
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="due_date"
+
+2028-10-30
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Loan 3 (Priya Nair - ₹6,000.00)
+# @name createLoan3
+POST {{baseUrl}}/loans
+Authorization: Bearer {{login.response.body.token}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="friend_name"
+
+Priya Nair
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="amount"
+
+6000.00
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="due_date"
+
+2028-12-01
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Create Loan with Receipt Attachment (Arjun Rao - ₹1,000.00)
+POST {{baseUrl}}/loans
+Authorization: Bearer {{login.response.body.token}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="friend_name"
+
+Arjun Rao
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="amount"
+
+1000.00
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="due_date"
+
+2028-12-15
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="receipt"; filename="receipt.png"
+Content-Type: image/png
+
+< ./docs/stitch/screens/01-login-step-1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###############################################################################
+# 4. List Loans & Filters (GET /api/loans)
+###############################################################################
+
+### List All Loans for Authenticated User (Newest due date first)
+GET {{baseUrl}}/loans
+Authorization: Bearer {{login.response.body.token}}
+
+### Filter Pending Loans
+GET {{baseUrl}}/loans?status=pending
+Authorization: Bearer {{login.response.body.token}}
+
+### Filter Overdue Loans
+GET {{baseUrl}}/loans?status=overdue
+Authorization: Bearer {{login.response.body.token}}
+
+### Filter Repaid Loans
+GET {{baseUrl}}/loans?status=repaid
+Authorization: Bearer {{login.response.body.token}}
+
+###############################################################################
+# 5. Loan Repayment (PATCH /api/loans/:id/repay)
+###############################################################################
+
+### Mark Loan as Repaid (Replace with created loan ID)
+PATCH {{baseUrl}}/loans/{{createLoan3.response.body.loan.id}}/repay
+Authorization: Bearer {{login.response.body.token}}
+
+### Repay Again (Idempotent test - must return same loan with no error)
+PATCH {{baseUrl}}/loans/{{createLoan3.response.body.loan.id}}/repay
+Authorization: Bearer {{login.response.body.token}}
+
+### Attempt to Repay Nonexistent Loan (Must return 404 NOT_FOUND)
+PATCH {{baseUrl}}/loans/00000000-0000-0000-0000-000000000000/repay
+Authorization: Bearer {{login.response.body.token}}
+
+###############################################################################
+# 6. Aggregate Summary (GET /api/summary)
+###############################################################################
+
+### Get Financial Summary (Computed via single SQL query)
+# Hand Calculation for Sample Data:
+# - Total Lent:   ₹2,500 + ₹4,500 + ₹6,000 + ₹1,000 = ₹14,000 (1,400,000 paise)
+# - Total Repaid: ₹6,000 (600,000 paise)
+# - Overdue:      ₹0 (0 paise if all due dates in future)
+GET {{baseUrl}}/summary
+Authorization: Bearer {{login.response.body.token}}
+
+###############################################################################
+# 7. Error Validation Tests
+###############################################################################
+
+### Reject Negative Amount
+POST {{baseUrl}}/loans
+Authorization: Bearer {{login.response.body.token}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="friend_name"
+
+Test Friend
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="amount"
+
+-50.00
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="due_date"
+
+2028-12-31
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Reject Past Due Date
+POST {{baseUrl}}/loans
+Authorization: Bearer {{login.response.body.token}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="friend_name"
+
+Test Friend
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="amount"
+
+100.00
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="due_date"
+
+2020-01-01
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
